@@ -1,6 +1,6 @@
 import { getIsObject } from "./common";
 
-export const getIsSameArray = (arrA: unknown[], arrB: unknown[]) => {
+const getIsSameArray = (arrA: unknown[], arrB: unknown[]) => {
   const isSameLength = arrA.length === arrB.length;
   const isSameAllValues = arrA.every((value, index) => {
     if (getIsObject(arrB[index])) {
