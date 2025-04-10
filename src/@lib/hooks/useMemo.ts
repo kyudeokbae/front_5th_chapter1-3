@@ -13,6 +13,7 @@ export function useMemo<T>(
 
   if (!isInitialized.current) {
     prevResult.current = factory();
+    prevDeps.current = _deps;
     isInitialized.current = true;
 
     return prevResult.current;
